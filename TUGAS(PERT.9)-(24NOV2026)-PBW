@@ -1,13 +1,23 @@
-const tampilkanBiodata = (nama, nim, prodi, semester) => {
-    return `Nama: ${nama}
-NIM: ${nim}
-Program Studi: ${prodi}
-Semester: ${semester}`;
+
+const hitungGaji = () => {
+    const nama = "Budi Santoso";
+    let gajiPokok = 5000000;
+    let tunjangan = 1000000;
+    let bonus = 500000;
+
+    let totalPendapatan = gajiPokok + tunjangan + bonus;
+    let potongan = totalPendapatan * 5 / 100;
+    let gajiBersih = totalPendapatan - potongan;
+
+    console.log(`
+Nama Karyawan    : ${nama}
+Gaji Pokok       : Rp${gajiPokok}
+Tunjangan        : Rp${tunjangan}
+Bonus            : Rp${bonus}
+Total Pendapatan : Rp${totalPendapatan}
+Potongan 5%      : Rp${potongan}
+Gaji Bersih      : Rp${gajiBersih}
+    `);
 };
 
-console.log(tampilkanBiodata(
-    "Siti Khonisa",
-    "25903460020",
-    "Teknologi Rekayasa Multimedia",
-    3
-));
+hitungGaji();
